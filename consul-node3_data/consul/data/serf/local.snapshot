@@ -1,0 +1,38 @@
+alive: ebc61cd4314d 192.168.16.4:8301
+alive: 9417d8cdce2e 192.168.32.3:8301
+alive: 38ff43ee16e2 192.168.32.4:8301
+clock: 5
+alive: dc038e3caf16 192.168.32.2:8301
+clock: 6
+event-clock: 1
+event-clock: 2
+event-clock: 3
+event-clock: 4
+event-clock: 5
+event-clock: 6
+alive: d83406c8b2d0 192.168.80.4:8301
+alive: 94381d30710b 192.168.80.2:8301
+clock: 7
+alive: db141a1bfa59 192.168.80.3:8301
+clock: 8
+event-clock: 7
+event-clock: 8
+event-clock: 9
+alive: c437d052b60c 192.168.96.2:8301
+alive: 9c84aa3773f8 192.168.96.3:8301
+clock: 10
+event-clock: 10
+alive: 976956816ff7 192.168.96.4:8301
+clock: 11
+event-clock: 11
+event-clock: 12
+event-clock: 13
+alive: 12c41277c2e4 192.168.128.2:8301
+alive: 03dd82957bc1 192.168.128.4:8301
+alive: ee5f54cc5fe1 192.168.128.3:8301
+clock: 16
+event-clock: 15
+event-clock: 16
+event-clock: 17
+leave
+clock: 17

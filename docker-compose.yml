@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  consul-node1:
+    image: bitnami/consul
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN=consul-node1
+      - CONSUL_RECURSOR=8.8.8.8
+      - CONSUL_ALLOW_PRIVILEGED_PORTS
+    ports:
+      - '8300:8300'
+      - '8301:8301'
+      - '8301:8301/udp'
+      - '8500:8500'
+      - '53:8600/udp'
+    volumes:
+      - '${PWD}/consul-node1_data:/bitnami'
+    networks:
+      - consul-network
+  consul-node2:
+    image: bitnami/consul
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN=consul-node1
+      - CONSUL_UI=false
+      - CONSUL_RECURSOR=8.8.8.8
+      - CONSUL_ALLOW_PRIVILEGED_PORTS
+    volumes:
+      - '${PWD}/consul-node2_data:/bitnami'
+    networks:
+      - consul-network
+networks:
+  consul-network:
+    driver: bridge
